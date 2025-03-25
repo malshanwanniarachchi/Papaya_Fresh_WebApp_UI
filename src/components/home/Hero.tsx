@@ -34,21 +34,6 @@ const Hero = () => {
         background: 'linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(255,240,229,1) 100%)'
       }}
     >
-      {/* Video Background */}
-      <div className="absolute inset-0 overflow-hidden z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-papaya/10 z-10"></div>
-        <video 
-          className="absolute w-full h-full object-cover" 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-        >
-          <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/GTYSdDW/videoblocks-fresh-fruits-falling-into-water-in-slow-motion-fresh-fruits-on-black-background_hcqx9_kax__97c9746a7a1dd7288e848232501f521b__P360.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden z-10">
         <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-papaya/5 animate-float"></div>
