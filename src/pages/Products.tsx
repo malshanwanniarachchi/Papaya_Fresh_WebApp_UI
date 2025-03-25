@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Button from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
-import { Leaf, Package, ShieldCheck } from 'lucide-react';
+import { Leaf, Package, ShieldCheck, Check } from 'lucide-react';
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

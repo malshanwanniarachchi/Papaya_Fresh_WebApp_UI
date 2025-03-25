@@ -1,8 +1,7 @@
-
 import { useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
-import { Check, Farm, Clock, Users, Leaf } from 'lucide-react';
+import { Check, Clock, Users, Leaf, GanttChart } from 'lucide-react';
 
 const About = () => {
   useEffect(() => {
