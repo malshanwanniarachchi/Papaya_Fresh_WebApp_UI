@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
@@ -26,216 +27,282 @@ const About = () => {
     };
   }, []);
 
-  const values = [
-    {
-      icon: <Leaf className="w-6 h-6 text-leaf" />,
-      title: "Sustainability",
-      description: "We are committed to sustainable farming practices that preserve the environment for future generations."
-    },
-    {
-      icon: <Check className="w-6 h-6 text-papaya" />,
-      title: "Quality",
-      description: "We never compromise on quality, ensuring every fruit meets our rigorous standards."
-    },
-    {
-      icon: <Users className="w-6 h-6 text-leaf" />,
-      title: "Community",
-      description: "We support local communities by providing employment and fair compensation."
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-papaya" />,
-      title: "Reliability",
-      description: "Our customers can depend on us for consistent quality and on-time delivery."
-    }
-  ];
-
-  const milestones = [
-    { year: 2010, event: "Founded PapayaFresh with a small farm in central Sri Lanka" },
-    { year: 2013, event: "Expanded operations to include a variety of tropical fruits" },
-    { year: 2015, event: "Secured our first major contract with Sri Lankan Airlines" },
-    { year: 2017, event: "Implemented sustainable farming practices across all operations" },
-    { year: 2019, event: "Started supplying to luxury hotels and resorts in Colombo" },
-    { year: 2021, event: "Expanded distribution network to cover all major supermarkets" },
-    { year: 2023, event: "Launched our organic certification program" }
-  ];
-
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="bg-secondary/50 py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6 reveal">
-              <div className="bg-white inline-flex items-center rounded-full px-3 py-1 text-sm mb-4">
-                <span>About Us</span>
-              </div>
-              <h1 className="heading-lg reveal delay-1">Our Story of Growth and Excellence</h1>
-              <p className="paragraph text-lg reveal delay-2">
-                PapayaFresh was founded with a vision to provide the finest tropical fruits to Sri Lanka's premier establishments. Our journey began with a small papaya farm and has since grown into a trusted supplier for the country's top hotels, airlines, and supermarkets.
-              </p>
-              <div className="pt-2 reveal delay-3">
-                <Link to="/contact">
-                  <Button size="lg">Get in Touch</Button>
-                </Link>
-              </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="bg-white inline-flex items-center rounded-full px-3 py-1 text-sm mb-4 reveal">
+              <span>Our Story</span>
             </div>
-            
-            <div className="relative h-[400px] reveal delay-2">
-              <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1621328406408-d06b01a74485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
-                  alt="Papaya Farm" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden border-4 border-white shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1543158966-01918e17d99e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                  alt="Harvesting Papaya" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            <h1 className="heading-lg mb-6 reveal delay-1">About Papaya Pure</h1>
+            <p className="paragraph text-lg mb-8 reveal delay-2">
+              We are a family-owned business dedicated to growing and supplying the finest tropical fruits in Sri Lanka, with papaya being our specialty.
+            </p>
           </div>
         </div>
       </section>
       
-      {/* Mission & Vision */}
+      {/* Our Story */}
       <section className="section-padding">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 reveal">
-              <div className="w-12 h-12 rounded-full bg-papaya/20 flex items-center justify-center mb-4">
-                <div className="w-6 h-6 rounded-full bg-papaya"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden reveal">
+              <img 
+                src="https://images.unsplash.com/photo-1595228702420-d3f5eb25717f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                alt="Papaya Farm" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            <div className="space-y-6 reveal delay-1">
+              <div className="bg-secondary inline-flex items-center rounded-full px-3 py-1 text-sm mb-4">
+                <span>Our Story</span>
               </div>
-              <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
+              <h2 className="heading-lg mb-4">From Small Farm to Trusted Supplier</h2>
+              <p className="paragraph text-lg mb-4">
+                Papaya Pure began as a small family farm in 2010 with a vision to grow the finest tropical fruits using sustainable farming practices. Our dedication to quality quickly gained recognition among Sri Lanka's premium establishments.
+              </p>
+              <p className="paragraph mb-6">
+                Today, we are proud to be the trusted supplier for Sri Lankan Airlines, Shangri-La Colombo, Spar Supermarkets, and other top establishments across the country, while still maintaining the family values and quality standards that defined us from day one.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-papaya/10 flex items-center justify-center shrink-0">
+                    <Clock className="w-5 h-5 text-papaya" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold mb-1">Est. 2010</h3>
+                    <p className="text-sm text-muted-foreground">Over a decade of excellence</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-papaya/10 flex items-center justify-center shrink-0">
+                    <GanttChart className="w-5 h-5 text-papaya" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold mb-1">50+ Acres</h3>
+                    <p className="text-sm text-muted-foreground">Of sustainably managed farms</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Our Mission */}
+      <section className="section-padding bg-gradient-to-r from-papaya/10 to-leaf/10">
+        <div className="container mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16 reveal">
+            <div className="bg-white inline-flex items-center rounded-full px-3 py-1 text-sm mb-4 reveal">
+              <span>Our Mission</span>
+            </div>
+            <h2 className="heading-lg mb-4 reveal delay-1">Growing Quality with Care</h2>
+            <p className="paragraph text-lg reveal delay-2">
+              Our mission is to provide the freshest, highest-quality tropical fruits while maintaining sustainable and responsible farming practices.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 card-hover reveal delay-1">
+              <div className="w-12 h-12 rounded-full bg-papaya/20 flex items-center justify-center mb-4">
+                <Leaf className="w-6 h-6 text-papaya" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Sustainable Farming</h3>
               <p className="paragraph">
-                To provide the freshest, highest quality tropical fruits to our customers while promoting sustainable farming practices and supporting local communities.
+                We implement eco-friendly farming methods that protect the environment while producing the finest fruits.
               </p>
             </div>
             
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 reveal delay-1">
-              <div className="w-12 h-12 rounded-full bg-leaf/20 flex items-center justify-center mb-4">
-                <div className="w-6 h-6 rounded-full bg-leaf"></div>
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 card-hover reveal delay-2">
+              <div className="w-12 h-12 rounded-full bg-papaya/20 flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-papaya" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
+              <h3 className="text-xl font-semibold mb-2">Community Support</h3>
               <p className="paragraph">
-                To be the leading supplier of premium tropical fruits in Sri Lanka, recognized for our unwavering commitment to quality, sustainability, and customer satisfaction.
+                We support local communities by providing fair employment and investing in rural development.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 card-hover reveal delay-3">
+              <div className="w-12 h-12 rounded-full bg-papaya/20 flex items-center justify-center mb-4">
+                <Check className="w-6 h-6 text-papaya" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Quality Guarantee</h3>
+              <p className="paragraph">
+                Every fruit that leaves our farm undergoes rigorous quality checks to ensure only the best reaches our customers.
               </p>
             </div>
           </div>
         </div>
       </section>
       
-      {/* Our Values */}
-      <section className="section-padding bg-white">
+      {/* Our Team */}
+      <section className="section-padding">
         <div className="container mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16 reveal">
             <div className="bg-secondary inline-flex items-center rounded-full px-3 py-1 text-sm mb-4 reveal">
-              <span>Our Core Values</span>
+              <span>Our Team</span>
             </div>
-            <h2 className="heading-lg mb-4 reveal delay-1">What Drives Us Every Day</h2>
-            <p className="paragraph reveal delay-2">
-              Our values form the foundation of everything we do, from how we grow our fruits to how we interact with our customers and community.
+            <h2 className="heading-lg mb-4 reveal delay-1">Meet the People Behind Papaya Pure</h2>
+            <p className="paragraph text-lg reveal delay-2">
+              Our dedicated team of professionals works tirelessly to ensure that we deliver only the best tropical fruits to our clients.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div 
-                key={index} 
-                className="bg-secondary/30 rounded-xl p-6 border border-border/10 card-hover reveal" 
-                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-              >
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                <p className="paragraph">{value.description}</p>
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/10 card-hover reveal delay-1">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                  alt="Team Member" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+              <div className="p-4 text-center">
+                <h3 className="font-semibold text-lg">Rajith Perera</h3>
+                <p className="text-muted-foreground text-sm">Founder & CEO</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/10 card-hover reveal delay-2">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                  alt="Team Member" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="font-semibold text-lg">Amali Fernando</h3>
+                <p className="text-muted-foreground text-sm">Operations Director</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/10 card-hover reveal delay-3">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                  alt="Team Member" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="font-semibold text-lg">Dinesh Jayawardena</h3>
+                <p className="text-muted-foreground text-sm">Farm Manager</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/10 card-hover reveal delay-4">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                  alt="Team Member" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="font-semibold text-lg">Kumari Silva</h3>
+                <p className="text-muted-foreground text-sm">Quality Control</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       
-      {/* Our Journey */}
+      {/* Testimonials */}
       <section className="section-padding bg-secondary/50">
         <div className="container mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16 reveal">
             <div className="bg-white inline-flex items-center rounded-full px-3 py-1 text-sm mb-4 reveal">
-              <span>Our Journey</span>
+              <span>Testimonials</span>
             </div>
-            <h2 className="heading-lg mb-4 reveal delay-1">Growing Together Since 2010</h2>
-            <p className="paragraph reveal delay-2">
-              From humble beginnings to becoming a trusted supplier for Sri Lanka's top establishments, our journey has been one of continuous growth and improvement.
+            <h2 className="heading-lg mb-4 reveal delay-1">What Our Clients Say</h2>
+            <p className="paragraph text-lg reveal delay-2">
+              Don't just take our word for it. Here's what some of our valued clients have to say about our fruits and service.
             </p>
           </div>
           
-          <div className="relative max-w-3xl mx-auto">
-            {/* Timeline */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-border"></div>
-            
-            {milestones.map((milestone, index) => (
-              <div 
-                key={index} 
-                className={`relative mb-12 flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} reveal`}
-                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-              >
-                <div className={`w-[45%] ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                  <div className="bg-white rounded-xl p-6 shadow-sm border border-border/10">
-                    <div className="text-2xl font-bold text-papaya mb-2">{milestone.year}</div>
-                    <p className="paragraph">{milestone.event}</p>
-                  </div>
-                </div>
-                
-                <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 rounded-full bg-papaya border-4 border-white"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 reveal delay-1">
+              <div className="flex gap-1 text-papaya mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Team Section */}
-      <section className="section-padding">
-        <div className="container mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="bg-secondary inline-flex items-center rounded-full px-3 py-1 text-sm mb-4 reveal">
-              <span>Our Team</span>
-            </div>
-            <h2 className="heading-lg mb-4 reveal delay-1">The People Behind PapayaFresh</h2>
-            <p className="paragraph reveal delay-2">
-              Our dedicated team of agricultural experts, logistics specialists, and customer service professionals work together to deliver excellence in every aspect of our business.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((_, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/10 card-hover reveal" 
-                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-              >
-                <div className="aspect-[3/4] relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              <p className="paragraph mb-6">
+                "The quality of papayas supplied by Papaya Pure has consistently exceeded our expectations. Their commitment to excellence has made them our preferred fruit supplier."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full overflow-hidden">
                   <img 
-                    src={`https://randomuser.me/api/portraits/${index === 0 ? 'men' : index === 1 ? 'women' : 'men'}/${index + 1}.jpg`} 
-                    alt="Team Member" 
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" 
+                    alt="Client" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold">{index === 0 ? 'Rajiv Perera' : index === 1 ? 'Amali Fernando' : 'Vikram Singh'}</h3>
-                  <p className="text-muted-foreground mb-4">{index === 0 ? 'Founder & CEO' : index === 1 ? 'Operations Director' : 'Farm Manager'}</p>
-                  <p className="paragraph">
-                    {index === 0 
-                      ? 'With over 20 years of experience in agriculture, Rajiv leads our company with passion and expertise.' 
-                      : index === 1 
-                        ? 'Amali ensures that our operations run smoothly, from farm to delivery.'
-                        : 'Vikram oversees our farming practices to ensure the highest quality fruits.'}
-                  </p>
+                <div>
+                  <h3 className="font-medium">Samantha De Silva</h3>
+                  <p className="text-sm text-muted-foreground">Procurement Manager, Shangri-La Colombo</p>
                 </div>
               </div>
-            ))}
+            </div>
+            
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 reveal delay-2">
+              <div className="flex gap-1 text-papaya mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+              </div>
+              <p className="paragraph mb-6">
+                "Reliability and consistency are what set Papaya Pure apart. Their fruits are always fresh, and their delivery is always on time, which is crucial for our operations."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                    alt="Client" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-medium">Nihal Gunawardena</h3>
+                  <p className="text-sm text-muted-foreground">Catering Manager, Sri Lankan Airlines</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 reveal delay-3">
+              <div className="flex gap-1 text-papaya mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+              </div>
+              <p className="paragraph mb-6">
+                "Our customers have noticed the superior quality of fruits from Papaya Pure. Their papayas are consistently sweet, fresh, and visually appealing - exactly what our shoppers demand."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                    alt="Client" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-medium">Priya Mendis</h3>
+                  <p className="text-sm text-muted-foreground">Fresh Produce Buyer, Spar Supermarkets</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -244,16 +311,16 @@ const About = () => {
       <section className="section-padding bg-gradient-to-r from-papaya/10 to-leaf/10">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center reveal">
-            <h2 className="heading-lg mb-6 reveal delay-1">Join Our Journey</h2>
+            <h2 className="heading-lg mb-6 reveal delay-1">Ready to Experience the Difference?</h2>
             <p className="paragraph text-lg mb-8 max-w-2xl mx-auto reveal delay-2">
-              Whether you're looking for a reliable supplier or interested in learning more about our story, we'd love to hear from you.
+              Contact us today to discuss how we can supply your business with the finest tropical fruits in Sri Lanka.
             </p>
             <div className="flex flex-wrap gap-4 justify-center reveal delay-3">
               <Link to="/contact">
                 <Button size="lg">Contact Us</Button>
               </Link>
               <Link to="/products">
-                <Button variant="outline" size="lg">Our Products</Button>
+                <Button variant="outline" size="lg">View Products</Button>
               </Link>
             </div>
           </div>
