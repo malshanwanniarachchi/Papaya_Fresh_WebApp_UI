@@ -34,15 +34,30 @@ const Hero = () => {
         background: 'linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(255,240,229,1) 100%)'
       }}
     >
+      {/* Video Background */}
+      <div className="absolute inset-0 overflow-hidden z-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-papaya/10 z-10"></div>
+        <video 
+          className="absolute w-full h-full object-cover" 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/GTYSdDW/videoblocks-fresh-fruits-falling-into-water-in-slow-motion-fresh-fruits-on-black-background_hcqx9_kax__97c9746a7a1dd7288e848232501f521b__P360.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
       {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-10">
         <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-papaya/5 animate-float"></div>
         <div className="absolute bottom-20 right-10 w-64 h-64 rounded-full bg-leaf/5 animate-float" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/3 right-1/4 w-20 h-20 rounded-full bg-papaya/10 animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
       
-      <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="space-y-8 z-10">
+      <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-20">
+        <div className="space-y-8">
           <div className="space-y-4">
             <div className="bg-secondary/80 backdrop-blur-sm text-sm inline-flex items-center rounded-full px-4 py-1 reveal">
               <span className="inline-block w-2 h-2 rounded-full bg-leaf mr-2"></span>
@@ -105,7 +120,7 @@ const Hero = () => {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce z-20">
         <span className="text-sm text-muted-foreground mb-2">Scroll Down</span>
         <div className="w-5 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center">
           <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2"></div>

@@ -1,8 +1,8 @@
 
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
@@ -10,7 +10,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean;
 }
 
-const Button = ({
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   variant = 'primary',
   size = 'md',
   children,
@@ -18,7 +18,7 @@ const Button = ({
   isLoading = false,
   className,
   ...props
-}: ButtonProps) => {
+}: ButtonProps, ref) => {
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
   
   const variants = {
@@ -46,6 +46,7 @@ const Button = ({
         className
       )}
       disabled={isLoading || props.disabled}
+      ref={ref}
       {...props}
     >
       {isLoading ? (
@@ -54,6 +55,9 @@ const Button = ({
       {children}
     </button>
   );
-};
+});
 
+Button.displayName = "Button";
+
+export { Button };
 export default Button;
